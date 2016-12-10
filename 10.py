@@ -34,8 +34,7 @@ def factory(arg):
             break
 
         low, lid, high, hid = instructions[id]
-        m, M = sorted(bots[id])
-        bots[id].clear()
+        m, M = sorted(bots.pop(id))
 
         if (m, M) == (17, 61):
             print('Bot', id, 'is responsible for comparing 61 and 17')
