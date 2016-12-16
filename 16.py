@@ -5,7 +5,7 @@ inp = '11101000110010100'
 
 
 def checksum(initial, length):
-    table = str.maketrans(dict(['01', '10']))
+    table = str.maketrans('01', '10')
     data = initial
 
     while len(data) < length:
