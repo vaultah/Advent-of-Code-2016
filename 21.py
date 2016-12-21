@@ -63,5 +63,5 @@ def unscramble(string, instructions):
 
 
 if __name__ == '__main__':
-    print('The result of scrambling \'abcdefgh\' is', scramble('abcdefgh', inp))
-    print('The result of un-scrambling \'fbgdceah\' is', unscramble('fbgdceah', inp))
+    print('The result of scrambling \'abcdefgh\' is', repr(scramble('abcdefgh', inp)))
+    print('The result of un-scrambling \'fbgdceah\' is', repr(unscramble('fbgdceah', inp)))
