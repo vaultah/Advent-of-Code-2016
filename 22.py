@@ -18,7 +18,7 @@ inp = [
 
 inp = {(*map(int, re.findall(r'\d+', n)),): s for n, *s in inp}
 viable_count = sum(b[-2] > a[1] != 0 for a, b in permutations(inp.values(), 2))
-print('The number of viable pairs is', viable_count) 
+print('The number of viable pairs is', viable_count)
 
 print('Grid:')
 
