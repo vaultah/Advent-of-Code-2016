@@ -1,6 +1,5 @@
 # Day 6: http://adventofcode.com/2016/day/6
 
-
 from collections import Counter
 
 

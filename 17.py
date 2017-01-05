@@ -23,12 +23,12 @@ def allowed(vertex, dirs):
             yield dir, nxt
 
 
-def bfs(start, goal):
+def bfs(start, end):
     queue = deque([(start, '')])
     while queue:
         vertex, dirs = queue.popleft()
         for dir, nxt in allowed(vertex, dirs):
-            if nxt == goal:
+            if nxt == end:
                 yield dirs + dir
             else:
                 queue.append((nxt, dirs + dir))

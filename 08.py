@@ -2,6 +2,7 @@
 
 import re
 
+
 inp = [
     'rect 1x1', 'rotate row y=0 by 7', 'rect 1x1', 'rotate row y=0 by 5', 'rect 1x1', 'rotate row y=0 by 5', 'rect 1x1', 'rotate row y=0 by 2',
     'rect 1x1', 'rotate row y=0 by 3', 'rect 1x1', 'rotate row y=0 by 5', 'rect 1x1', 'rotate row y=0 by 3', 'rect 1x1', 'rotate row y=0 by 2',

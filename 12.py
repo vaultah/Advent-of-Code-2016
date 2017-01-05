@@ -1,6 +1,5 @@
 # Day 12: http://adventofcode.com/2016/day/12
 
-
 from collections import Counter
 
 
@@ -33,7 +32,6 @@ inp = [
 
 def f(instructions, **init):
     reg = Counter(**init)
-
     i = 0
 
     while i < len(instructions):

@@ -8,30 +8,22 @@ inp = 'cxdnnyjw'
 
 
 def first(arg):
-    h = md5(arg.encode())
     pwd = ''
 
     for i in count():
-        c = h.copy()
-        c.update(str(i).encode())
-        dig = c.hexdigest()
-
-        if dig.startswith('0' * 5):
+        dig = md5(f"{arg}{i}".encode()).hexdigest()
+        if dig.startswith('00000'):
             pwd += dig[5]
             if len(pwd) == 8:
                 return pwd
 
 
 def second(arg):
-    h = md5(arg.encode())
     pwd = {}
 
     for i in count():
-        c = h.copy()
-        c.update(str(i).encode())
-        dig = c.hexdigest()
-
-        if dig.startswith('0' * 5):
+        dig = md5(f"{arg}{i}".encode()).hexdigest()
+        if dig.startswith('00000'):
             if dig[5] not in {'0', '1', '2', '3', '4', '5', '6', '7'}:
                 continue
 

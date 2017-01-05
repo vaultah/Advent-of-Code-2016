@@ -17,27 +17,28 @@ inp = [
 ]
 
 inp = {(*map(int, re.findall(r'\d+', n)),): s for n, *s in inp}
-viable_count = sum(b[-2] > a[1] != 0 for a, b in permutations(inp.values(), 2))
-print('The number of viable pairs is', viable_count)
 
-print('Grid:')
 
-mx, my = max(inp)
+if __name__ == '__main__':
+    viable_count = sum(b[-2] > a[1] != 0 for a, b in permutations(inp.values(), 2))
+    print('The number of viable pairs is', viable_count)
 
-for y in range(my + 1):
-    for x in range(mx + 1):
-        if (x, y) == (0, 0):
-            c = '+'
-        elif (x, y) == (mx, 0):
-            c = 'G'
-        elif inp[x, y][0] > 15:
-            # find sufficiently large nodes in this input
-            c = '#'
-        elif not inp[x, y][-1]:
-            c = ' '
-        else:
-            c = '.'
+    print('Grid:')
+    mx, my = max(inp)
+    threshold = 15 # specific to this input
+    for y in range(my + 1):
+        for x in range(mx + 1):
+            if (x, y) == (0, 0):
+                c = '+'
+            elif (x, y) == (mx, 0):
+                c = 'G'
+            elif inp[x, y][0] > threshold:
+                c = '#'
+            elif not inp[x, y][-1]:
+                c = ' '
+            else:
+                c = '.'
 
-        print(c, end=' ')
+            print(c, end=' ')
 
-    print()
+        print()

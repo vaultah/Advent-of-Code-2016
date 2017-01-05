@@ -42,8 +42,6 @@ def f(instructions, **init):
     reg = Counter(**init)
     i = 0
 
-    last = None
-
     def to_int(val):
         try:
             return int(val)

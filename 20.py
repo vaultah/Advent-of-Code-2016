@@ -21,4 +21,4 @@ if __name__ == '__main__':
     ips = list(allowed(inp, 9))
     print('There are', len(ips), 'allowed IPs:')
     for i, x in enumerate(ips, start=1):
-        print('{}) {}'.format(i, x))
+        print(f'{i}) {x}')

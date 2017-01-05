@@ -2,6 +2,7 @@
 
 from collections import deque
 
+
 inp = 1362
 
 
